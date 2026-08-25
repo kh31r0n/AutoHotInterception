@@ -49,7 +49,7 @@ This handy tool allows you to check if AHI is working, and also to find the VID/
 You can use the handy "Copy" buttons to copy the VID/PID or DeviceHandle of the device to the clipboard.  
 When using the monitor app, **DO NOT** tick all devices at once, as if it crashes, it will lock up all devices.
 Instead, tick one at a time and see if it your device.  
-![](https://github.com/evilC/AutoHotInterception/blob/master/Monitor.png)  
+![](Monitor.png)  
 
 ------
 
@@ -66,7 +66,7 @@ There is nothing I can do to fix this issue, it is a limitation of the Intercept
 Download and install the [Interception Driver](https://github.com/oblitum/Interception/releases)  
 Note that you **must** run `install-interception.exe` at an admin command prompt (**Not double-click it**) - once you do so, it will instruct you to execute `install-interception.exe /install` to actually perform the install.  
 Here is a GIF showing the process:  
-![](https://github.com/evilC/AutoHotInterception/blob/master/InterceptionInstall.gif)
+![](InterceptionInstall.gif)
 
 ## Build your AutoHotInterception folder
 1. Download an AHI release from the [releases page](https://github.com/evilC/AutoHotInterception/releases) and extract it to a folder.  
@@ -79,7 +79,7 @@ It contains a number of sample `.ahk` scripts and a `lib` folder.
 Copy both of these folders into the `lib` folder in your "working folder".  
 
 Example for AHK v1 - the "working folder" is on the left, top right is the AutoHotInterception zip, bottom right is the Interception zip.   
-![](https://github.com/evilC/AutoHotInterception/blob/master/FolderSetup.gif)
+![](FolderSetup.gif)
 
 The folder structure should end up looking like:  
 ```
