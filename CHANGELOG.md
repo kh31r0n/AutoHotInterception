@@ -10,6 +10,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Removed
 ### Fixed
 
+## [0.10.0] - 2026-10-23
+### Added
+- AHI Configurator: a GUI (Windows, .NET Framework 4.8) to remap keys and mouse buttons per device without writing code.  
+Capture the key / button on the device you want to change, then choose what it does: another key, a mouse button or wheel, block it, type text, send a shortcut (with "Press the key to send..." capture), or run a program.  
+Per-application profiles, "start at sign-in", and export of the generated script.  
+The Configurator generates an AHK v2 script that uses the new `AHK v2\Lib\AHIRuntime.ahk`
+- Setup wizard (`AHI-Setup-<version>.exe`, Inno Setup) that installs the AHK v2 library, examples, Monitor and the Configurator,
+downloads the Interception driver and library from the official release (pinned version, SHA-256 checked) after you accept its licence,
+installs or reinstalls the driver, and can download and install AutoHotkey v2
+- `Installer\build.ps1` to build, test and package a release
+- Unit tests for the Configurator, and `AHK v2\Development Tools\AHIRuntimeTest.ahk` for the runtime
+### Changed
+- C# projects converted to SDK-style, so they build with `dotnet build` / `dotnet test` as well as Visual Studio.  
+interception.dll is copied to the output folders by the project instead of a pre-build xcopy step
+
 ## [0.9.1] - 2023-07-31
 ### Fixed
 - Compiled script (FileInstall) fix for AHK v2

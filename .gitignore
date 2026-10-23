@@ -308,3 +308,6 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+
+# Installer build output
+Installer/Output/
