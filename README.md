@@ -60,6 +60,28 @@ There is nothing I can do to fix this issue, it is a limitation of the Intercept
 
 ------
 
+# Easy install & Configurator (AHK v2, Windows 10 / 11)
+Download `AHI-Setup-<version>.exe` from the [releases page](https://github.com/kh31r0n/AutoHotInterception/releases) and run it. The wizard:
+- installs the AHK v2 library, the example scripts, Monitor and the **AHI Configurator**
+- downloads the [Interception driver](https://github.com/oblitum/Interception) from its official release, after you accept its licence (free for non-commercial use; commercial use needs a licence from its author), and installs it - **restart Windows afterwards**
+- downloads and installs AutoHotkey v2 if you do not have it
+
+Running setup again lets you reinstall the driver or AutoHotkey.
+
+The **AHI Configurator** lets you remap keys and mouse buttons per device without writing code:
+1. Click **Add mapping...**, then **Press a key...** (or **Press a mouse button...**) and press it on the device you want to change - the device is picked for you
+2. Choose what it does: another key, a mouse button / wheel, nothing (block), type text, send a shortcut, or open a program
+3. Optionally add **Profiles** so a mapping only applies in a given program
+4. Click **Apply**. Mappings run in the background (tray icon); tick **Start mappings when I sign in** to keep them on
+
+Settings are stored in `%APPDATA%\AutoHotInterception`. **Export .ahk...** saves the generated script if you want to continue in code.
+
+To build the installer yourself: `powershell -ExecutionPolicy Bypass -File Installer\build.ps1` (needs the .NET SDK, Inno Setup 6.5+, and interception.dll in `C#\Dependencies`).
+
+The manual setup below is still needed for AHK v1, or if you do not want to use the installer.
+
+------
+
 # Setup
 
 ## Install the Intereception driver
